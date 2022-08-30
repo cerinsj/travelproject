@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN PAGE</title>
+</head>
+<body background="{% static 'loginimg.jpg' %}">
+    <center>
+        <div style="background-color:rgba(255, 255, 255, 0.351);width:400px;height:300px;margin-top:100px;border-radius:10px">
+            <h2 style="padding-top:20px">Login</h2>
+            <form action="loginsub">
+            <input  name="uname" type="text" placeholder="username" required style="width:240px;height:30px;margin:10;padding-left:10px"><br><br>
+            <input  name="password" type="password" placeholder="password" required style="width:240px;height:30px;margin:10;padding-left:10px"><br><br>
+            <button type="submit" style="width:240px;height:35px;background-color:#627e3f;border:none">Submit</button>
+            </form>
+
+        </div>
+    </center>
+
+    
+</body>
+</html>

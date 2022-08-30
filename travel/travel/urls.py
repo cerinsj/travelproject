@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+from home import views
 urlpatterns = [
+    path('login/',views.samp),
+    path('register/',views.test),
     path('admin/', admin.site.urls),
+    path('test/',views.index),
+    path('',views.index),
+    path('login/loginsub',views.loginurl)
 ]
