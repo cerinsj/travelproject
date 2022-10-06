@@ -85,6 +85,18 @@ DATABASES = {
     }
 }
 
+CASHE_TTL=60*1500
+CACHE={
+    'default':{
+        'BACKEND':'django_redis.cash.RadisCache',
+        'LOCATION':'radis://127.0.0.1:6379/1',
+        'OPTIONS':{
+            'CLIENT_CLASS':'django_redis.client.DefaultClient',
+        },
+        'KEY_PERFIX':'example',
+
+    }
+}
 
 
 # Password validation
