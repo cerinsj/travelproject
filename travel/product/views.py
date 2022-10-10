@@ -13,11 +13,13 @@ def details(request):
         cache.set(id,pro)
         print("data from database") 
     cmt=comment.objects.filter(place_id=id)
-    return render(request,'single.html',{'p':pro,'cmt':cmt})
+    res=render(request,'single.html',{'p':pro,'cmt':cmt})
+    res.set_cookie('pro_name',pro.name)
+    return res
 
 def commenting(request):
     msg=request.GET['msg']
-    pro_id=request.GET['pro_id']
+    pro_id=request.GET['pro_id']   
     user=request.GET['user']
     cmt=comment.objects.create(cmt=msg,name=user,place_id=pro_id)
     cmt.save();
