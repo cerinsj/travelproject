@@ -7,7 +7,7 @@ from django.contrib.auth.models import User,auth
 def index(request):
     # cookies_views
     if 'pro_name' in request.COOKIES:
-        msg=request.COOKIES['name']
+        msg=request.COOKIES['pro_name']
     else:
         msg='What Say Our Clients!!'
     # searching

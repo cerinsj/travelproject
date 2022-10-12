@@ -28,7 +28,27 @@
 
     <style>
         .messege_box{
-            background-color:rgb(202, 194, 194)
+            background-color:#FFFFFF;
+            border:3px solid #6c757d;
+            padding:5px;
+            border-radius:10px;
+            height:500px;
+            overflow:auto;
+        }
+
+        .message-box p{
+            background-color:#6c757d;
+            padding:10px;
+            margin:10px;
+            padding-left:60px;
+            border-radius:10px;
+            padding-top:20px;
+            padding-bottom:20px;
+            color:#FFFFFF;
+        }
+
+
+
         }
     </style>
 
@@ -202,8 +222,19 @@
                         </div>
                     </div>
                     <!-- Blog Detail End -->
-    
+
+
                     <!-- Comment List Start -->
+
+                    <!--Section Field Start-->
+                    <div class="bg-white mb-3" style="padding:30px;margin-bottom:30px;">
+                        <h2>Previous View</h2>
+                        {% for k in place2 %}
+                        <img src="{{k.img.url}}" width="150px" height="150px" style="border-radius: 50%;margin:7px;">
+                        {% endfor %}
+                        </div>
+
+                    <!--Section Field End-->
                     <div class="bg-white" style="padding: 30px; margin-bottom: 30px;">
                         <h4 class="text-uppercase mb-4" style="letter-spacing: 5px;">Comments</h4>
                         <div class="messege_box">
@@ -228,7 +259,7 @@
                             <div class="form-group mb-0">
                                 <input type="submit" value="Leave a comment"
                                     class="btn btn-primary font-weight-semi-bold py-2 px-3">
-                                    <input type="hidden" name="pro_id" value="{{pro.id}}">
+                                    <input type="hidden" name="pro_id" value="{{p.id}}">
                                     <input type="hidden" name="user" value="{{user.username}}">
                             </div>
                             {% endif %}
